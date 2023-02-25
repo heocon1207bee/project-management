@@ -1,139 +1,139 @@
-@import '../../assets/sass/colors.scss';
+@import "../../assets/sass/colors.scss";
 
 .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 300px;
-    padding: 10px 14px;
-    background-color: $sidebar-color;
-    border-right: 2px solid $border-color;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 300px;
+  padding: 10px 14px;
+  background-color: $sidebar-color;
+  border-right: 2px solid $border-color;
 
-    .image {
-        min-width: 60px;
-        display: flex;
-        align-items: center;
+  .image {
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+  }
+
+  .text {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .image-text {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    img {
+      width: 40px;
+      border-radius: 6px;
     }
 
+    .header-text {
+      display: flex;
+      flex-direction: column;
+
+      .name {
+        font-weight: 600;
+      }
+
+      .profession {
+        margin-top: -2px;
+      }
+    }
+  }
+
+  header {
+    position: relative;
+
+    .toggle {
+      position: absolute;
+      top: 50%;
+      right: -25px;
+      transform: translateY(-50%);
+      height: 25px;
+      width: 25px;
+      color: $light_text-color;
+      background-color: $main-color;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  }
+
+  li {
+    height: 50px;
+    width: 100%;
+    margin-top: 10px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+
+    .icon {
+      min-width: 60px;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .icon,
     .text {
-        font-size: 16px;
-        font-weight: 500;
+      color: $text-color;
     }
 
-    .image-text {
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-
-        img {
-            width: 40px;
-            border-radius: 6px;
-        }
-
-        .header-text {
-            display: flex;
-            flex-direction: column;
-
-            .name {
-                font-weight: 600;
-            }
-
-            .profession {
-                margin-top: -2px;
-            }
-        }
+    &:hover {
+      background-color: $main-color;
     }
 
-    header {
-        position: relative;
-
-        .toggle {
-            position: absolute;
-            top: 50%;
-            right: -25px;
-            transform: translateY(-50%);
-            height: 25px;
-            width: 25px;
-            color: $light_text-color;
-            background-color: $main-color;
-            border-radius: 50%;
-            cursor: pointer;
-        }
+    &:hover .text,
+    &:hover .icon {
+      color: $light_text-color;
     }
+  }
 
-    li {
-        height: 50px;
-        width: 100%;
-        margin-top: 10px;
-        list-style: none;
-        display: flex;
-        align-items: center;
-        border-radius: 6px;
-        cursor: pointer;
-        transition: all 0.4s ease;
+  .menu-bar {
+    height: calc(100% - 90px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
-        .icon {
-            min-width: 60px;
-            font-size: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+  .moon-sun {
+    position: relative;
+  }
 
-        .icon, .text {
-            color: $text-color;
-        }
+  .toggle-switch {
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-width: 60px;
 
-        &:hover {
-            background-color: $main-color;
-        }
+    .switch {
+      position: relative;
+      height: 22px;
+      width: 44px;
+      border-radius: 25px;
+      background-color: $toggle-color;
 
-        &:hover .text,
-        &:hover .icon {
-            color: $light_text-color;
-        }
-    }
-
-    .menu-bar {
-        height: calc(100% - 90px);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .moon-sun {
-        position: relative;
-    }
-
-    .toggle-switch {
+      &::before {
+        content: "";
+        height: 15px;
+        width: 15px;
+        background-color: $sidebar-color;
         position: absolute;
-        right: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        min-width: 60px;
-
-        .switch {
-            position: relative;
-            height: 22px;
-            width: 44px;
-            border-radius: 25px;
-            background-color: $toggle-color;
-
-            &::before {
-                content: '';
-                height: 15px;
-                width: 15px;
-                background-color: $sidebar-color;
-                position: absolute;
-                border-radius: 50%;
-                top: 50%;
-                left: 5px;
-                transform: translateY(-50%);
-            }
-        }
+        border-radius: 50%;
+        top: 50%;
+        left: 5px;
+        transform: translateY(-50%);
+      }
     }
+  }
 }
-

@@ -13,7 +13,7 @@ const ModeChangeBtn = () => {
       <span className="icon">
         {mode?<BiMoon />:<BiSun />}
       </span>
-      <span className="text mode-text">{mode?'Chế độ tối':'Chế độ sáng'}</span>
+      <span className="text mode-text">{mode?'Chuyển chế độ tối':'Chuyển chế độ sáng'}</span>
       <div className="toggle-switch">
         <span className="switch"></span>
       </div>

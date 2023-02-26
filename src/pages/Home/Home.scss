@@ -142,6 +142,7 @@
             border-radius: 4px 4px 15px 15px;
             transition: all 0.2s ease;
             transform-origin: top;
+            z-index: 1;
 
             li {
               display: flex;
@@ -152,6 +153,7 @@
               width: 100%;
               border-radius: 12px;
               transition: all 0.3s ease;
+              z-index: 1;
 
               &:hover {
                 background-color: $main-color;
@@ -167,7 +169,7 @@
         justify-content: center;
         background-color: $main-color;
         height: 40px;
-        width: 150px;
+        width: 160px;
         padding: 5px 10px;
         font-size: 14px;
         font-weight: 500;

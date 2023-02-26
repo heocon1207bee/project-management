@@ -1,0 +1,62 @@
+@import '../../assets/sass/colors.scss';
+
+.project-panel {
+    width: 100%;
+    max-height: calc(100% - 181px);
+    padding: 15px 25px;
+
+    .project-container {
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+        .project-item {
+            position: relative;
+            background-color: $home-color;
+            border: 2px solid $border-color;
+            border-radius: 18px;
+            padding: 15px 40px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            transition: all 0.3s ease;
+            
+            &:hover {
+                transform: scale(1.02);
+            }
+
+            .status-dot, .option-dot {
+                position: absolute;
+            }
+
+            .status-dot {
+                top: -5px;
+                left: -5px;
+                height: 20px;
+                width: 20px;
+                //border: 2px solid $border-color;
+                border-radius: 50%;
+                background-color: $home-color;
+                color: $text-color;
+            }
+
+            .option-dot {
+                top: 15px;
+                right: 15px;
+                height: 25px;
+                width: 25px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                cursor: pointer;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    color: $light_text-color;
+                    background-color: $main-color;
+                }
+            }
+        }
+    }
+}

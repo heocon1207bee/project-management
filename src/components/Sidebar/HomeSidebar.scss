@@ -47,6 +47,7 @@
 
   header {
     position: relative;
+    margin-top: 23px;
 
     .toggle {
       position: absolute;
@@ -97,7 +98,7 @@
   }
 
   .menu-bar {
-    height: calc(100% - 90px);
+    height: calc(100% - 90px - 23px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;

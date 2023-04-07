@@ -1,6 +1,7 @@
 import React from "react";
-import { BsThreeDotsVertical } from "react-icons/bs";
+import { BsThreeDotsVertical, BsInfoCircle } from "react-icons/bs";
 import { BiCalendarWeek, BiCalendarCheck, BiCalendarX } from "react-icons/bi";
+import { GrUserAdmin } from "react-icons/gr";
 
 const ProjectItem = (props) => {
     return (
@@ -12,9 +13,18 @@ const ProjectItem = (props) => {
                 <div className="option-dot">
                     <BsThreeDotsVertical />
                 </div>
-                <h3>Tên dự án</h3>
-                <p>Người tạo: Tên Người Tạo</p>
-                <p>Mục tiêu: Mục tiêu của dự án</p>
+                <div className="project-info">
+                    <h3>Tên dự án</h3>
+                    <p>
+                        <GrUserAdmin /> <span>Tên Người Tạo</span>
+                    </p>
+                    <p>
+                        <BsInfoCircle />{" "}
+                        <span>
+                            Phải hoàn thành dự án trong thời gian sớm nhất
+                        </span>
+                    </p>
+                </div>
             </div>
         </div>
     );
